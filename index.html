@@ -16,22 +16,21 @@
     <div class="container">
       
 
-      <div class="dice">
+      <div id="dice1" class="dice">
         <p>Player 1</p>
         <img class="img1" src="./images/tom.png" />
+        
       </div>
 
-      <div class="dice">
+      <div id="dice2" class="dice">
         <p>Player 2</p>
-        <img class="img2" src="./images/jerry.jpg" />
+        <img class="img2" src="./images/Jerry.jpg" />
+        
       </div>
-      <div id="dice1">
-      
-      
-      </div>
+     
     </div>
     <div>
-      <button class="btn" onclick="pickWinner()">Play now</button>
+      <button id="play" class="btn" onclick="pickWinner()">Play now</button>
     </div>
 
     
@@ -39,40 +38,42 @@
 
 function pickWinner(){
 
-  var dice1= Math.floor(Math. random() * 6) + 1 ;
-  var dice2= Math.floor(Math. random() * 6) + 1 ;
-  var winner="draw";
+  let dice1= Math.floor(Math. random() * 6) + 1;
+  let dice2= Math.floor(Math. random() * 6) + 1;
+  var winner="";
 
   if(dice1>dice2){
   winner="tom";
 
   }
-else
+  if(dice1<dice2){
 winner="jerry";
+}
+if(dice1==dice2){
+winner="draw";
+}
 
 
-document.getElementById("dice1").innerHTML="<img class='img3' src='./images/dice"+dice1+".png'/> <img class='img4' src='./images/dice"+dice2+".png'/>"
+document.getElementById("dice1").innerHTML+="<img class='img3' src='./images/dice"+dice1+".png'/>"
+document.getElementById("dice2").innerHTML+="<img class='img4' src='./images/dice"+dice2+".png'/>"
 
+if(winner=="draw"){
+  document.getElementById("winner").innerHTML="<h2 class='wave-text-yellow'><span>It's</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>T</span><span>i</span><span>e</span><span>!</span><span>!</span><h2>"
+}
 
 if(winner=="tom"){
   document.getElementById("winner").innerHTML="<h2 style='color:yellow'>Winner is Tom<h2><img class='img1' src='./images/tom.png' />"+"<h2 class='wave-text'><span>C</span><span>O</span><span>N</span><span>G</span><span>R</span><span>A</span><span>T</span><span>S</span><span>!</span><h2>"
+    
 }
 
 if(winner=="jerry"){
   document.getElementById("winner").innerHTML="<h2 style='color:yellow'>Winner is Jerry<h2><img class='img2' src='./images/jerry.jpg' />"+"<h2 class='wave-text'><span>C</span><span>O</span><span>N</span><span>G</span><span>R</span><span>A</span><span>T</span><span>S</span><span>!</span><h2>"
+   
 }
 
-if(winner=="draw"){
-  document.getElementById("winner").innerHTML="<h2 class='wave-text'><span>It's</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>T</span><span>i</span><span>e</span><span>!</span><span>!</span><h2>"
-}
-
-var winner="draw";
 
 
 }
     </script>
   </body>
 </html>
-
-
-
