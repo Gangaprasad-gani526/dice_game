@@ -1,44 +1,43 @@
-body{
-  background-color: black;
-  
-}
-
-.container{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.img1{
-height: 250px;
-width: 250px;
-
-}
-
-.img2{
-  height: 250px;
-  width: 250px;
+  body {
+    background-color: black;
 
   }
 
-  .img3{
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img1 {
+    height: 250px;
+    width: 250px;
+
+  }
+
+  .img2 {
+    height: 250px;
+    width: 250px;
+  }
+
+  .img3 {
     height: 100px;
     width: 100px;
     margin-top: 50px;
     margin-left: 80px;
     display: block;
-    }
+  }
 
-    .img4{
-      height: 100px;
-      width: 100px;
-      margin-top: 50px;
-      margin-left: 80px;;
-      display: block;
-      
-      }
+  .img4 {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 80px;
+    ;
+    display: block;
+  }
 
-  .header{
+  .header {
     color: white;
     text-align: center;
     font-size: xx-large;
@@ -46,78 +45,90 @@ width: 250px;
     font-style: oblique;
   }
 
-  p{
+  p {
     color: white;
-    font-size:x-large;
+    font-size: x-large;
     font-style: italic;
     text-align: center;
   }
 
-  .dice{
-display: inline-block;
-left: 50%;
-}
+  .dice {
+    display: inline-block;
+    left: 50%;
+  }
 
-.btn{
-  background-color: red;
-  color: yellow;
-  font-size: 50px;
-   margin-left: 50px;
-   margin-top: 100px;
-   margin-bottom: 100px;
-   padding: 15px;
-   border-radius: 20px;  
-}
+  .btn {
+    background-color: red;
+    color: yellow;
+    font-size: 50px;
+    padding: 15px;
+    border-radius: 20px;
+  }
 
+  div#play {
+    left: 50%;
+    margin-top: 200px;
+  }
 
-.wave-text span {
+  .wave-text span {
     display: inline-block;
     font-size: 4rem;
     animation: wave 2s ease-in-out infinite;
-}
+  }
 
-.wave-text-yellow span {
-  display: inline-block;
-  font-size: 4rem;
-  animation: wave 2s ease-in-out infinite;
-  color: yellow;
-}
+  .wave-text-yellow span {
+    display: inline-block;
+    font-size: 4rem;
+    animation: wave 2s ease-in-out infinite;
+    color: yellow;
+  }
 
 
-.wave-text span:nth-child(1) {
+  .wave-text span:nth-child(1) {
     animation-delay: 0s;
-}
-.wave-text span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.wave-text span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.wave-text span:nth-child(4) {
-    animation-delay: 0.6s;
-}
-.wave-text span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-.wave-text span:nth-child(6) {
-  animation-delay: 1.0s;
-}
-.wave-text span:nth-child(7) {
-  animation-delay: 1.2s;
-}
-.wave-text span:nth-child(8) {
-  animation-delay: 1.4s;
-}
-.wave-text span:nth-child(9) {
-  animation-delay: 1.6s;
-}
+  }
 
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
+  .wave-text span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .wave-text span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .wave-text span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  .wave-text span:nth-child(6) {
+    animation-delay: 1.0s;
+  }
+
+  .wave-text span:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+
+  .wave-text span:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+
+  .wave-text span:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+
+  @keyframes wave {
+
+    0%,
+    100% {
+      transform: translateY(0);
     }
+
     50% {
-        transform: translateY(-20px);
+      transform: translateY(-20px);
     }
-    
-}
+
+  }
